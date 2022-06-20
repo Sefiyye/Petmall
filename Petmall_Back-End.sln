@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petmall_Back-End", "Petmall_Back-End\Petmall_Back-End.csproj", "{D9454F0F-FFC4-49B8-B67B-9A0309A55AD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9454F0F-FFC4-49B8-B67B-9A0309A55AD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9454F0F-FFC4-49B8-B67B-9A0309A55AD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9454F0F-FFC4-49B8-B67B-9A0309A55AD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9454F0F-FFC4-49B8-B67B-9A0309A55AD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FC404C1-12E9-4F8D-A95E-30281EA71A18}
+	EndGlobalSection
+EndGlobal

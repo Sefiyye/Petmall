@@ -1,0 +1,193 @@
+﻿@model HomeVM 
+<main>
+        <section id="main-slider">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                @foreach (var item in Model.Slider)
+               {
+                     <div class="carousel-item right">
+                        <img src="~/assets/images/@item.Image" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                         <div class="text3">
+                            <h5>@item.Title</h5>
+                            <h1>@item.Subtitle</h1>
+                         </div>
+                        </div>
+                      </div> 
+               }
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+           </section>
+
+        <section id="category">
+            <div class="container">
+                <div class="title text-center">
+                    <div class="img">
+                        <img src="~/assets/images/icon.jpg"
+                            alt="">
+                    </div>
+                    <div class="text">
+                        <span>Shop by Category</span>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="row">
+                       @foreach (var item in Model.Category)
+                      {
+                             <div class="col-6 col-sm-6 col-md-3 col-lg-2">
+                            <div class="cart-item">
+                                <div class="img">
+                                    <div class="background-color"></div>
+                                    <img class="main" src="~/assets/images/@item.CatImage" alt="">
+                                    <div class="second-img">
+                                        <img class="secondd"
+                                            src="~/assets/images/@item.HoverImage"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <p>@item.Name</p>
+                                    <span>@item.Subtitle</span>
+                                </div>
+                            </div>
+                        </div> 
+                      }
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="seller">
+            <div class="container">
+                <div class="seller-txt">
+                    <div class="title  text-center">
+                        <span>Best Sellers</span>
+                    </div>
+                    <div class="tab">
+                        <div class="tablist">
+                            <ul class="d-flex list-unstyled justify-content-center">
+                               <li data-btn="0" class="tabBtn activelink"><a href="#">Cats Foods</a></li>
+                                <li data-btn="1" class="tabBtn ms-5"><a href="#">Toys</a></li>
+                                <li data-btn="2" class="tabBtn ms-5"><a href="#">T-Shirt</a></li>
+                                <li data-btn="3" class="tabBtn ms-5"><a href="#">Jewelry</a></li>
+                                <li data-btn="4" class="tabBtn ms-5"><a href="#">Accessories</a></li>
+                            </ul>
+                        </div>
+                        <div class="tabs">
+                            <div class="tab-content active">
+                                <div class="row">
+                                  @foreach (var item in Model.Seller)
+                                 {
+                                             <div class="col-lg-3">
+                                        <div class="tab-item">
+                                            <div class="img">
+                                                <img class="main"
+                                                    src="~/assets/images/@item.MainImage"
+                                                    alt="">
+                                                <img class="secondd" src="~/assets/images/@item.AnotherImage" alt="">
+                                                <div class="icons">
+                                                    <ul class="d-flex list-unstyled">
+                                                        <li><a href="#"><i class="fa-solid fa-eye"></i></a></li>
+                                                        <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                                                        </li>
+                                                        <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="txt">
+                                                <a href="#">@item.Subtitle</a>
+                                                <div class="price">
+                                                    <span>
+                                                        $@item.Price
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                 }
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+             </div>
+         </section>
+
+
+         <section id="end-slider">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                          @foreach (var item in Model.Carousel)
+                         {
+                            <div class="col-lg-6 p-0">
+                                <div class="img">
+                                    <img src="~/assets/images/@item.Image" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 p-0">
+                                <div class="img-txt">
+                                    <div class="txt">
+                                        <div class="custom">@item.Title</div>
+                                        <p>“@item.Description</p>
+                                        <span>
+                                            @item.Name
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>   
+                         }
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="icons">
+            <div class="container">
+                <div class="icon-text">
+                    <div class="row">
+                    @foreach (var item in Model.Icon)
+                   {
+                           <div class="col-lg-3">
+                            <div class="img">
+                                <img src="~/assets/images/@item.Image" alt="">
+                            </div>
+                            <div class="text">
+                                <h6>@item.Name</h6>
+                            </div>
+                            <div class="subtitle">
+                                <span>@item.Description1</span>
+                                <br>
+                                <span class="second-text">@item.Description2</span>
+                            </div>
+                        </div> 
+                   }
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        </main>
+        <hr>
