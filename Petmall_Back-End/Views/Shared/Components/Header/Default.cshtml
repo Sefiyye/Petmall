@@ -1,0 +1,33 @@
+﻿@model HomeVM 
+<header>
+        <section id="nav">
+            <div class="container">
+                <div class="row">
+                   <div class="col-lg-3">
+                    <div class="logo">
+                        <img src="~/assets/images/@Model.Settings.HeaderLogo" alt="">
+                    </div>
+                   </div>
+                   <div class="col-lg-7">
+                    <ul>
+                        <li><a href="#">Home<i class="fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Pages<i class="fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="#">Blog<i class="fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="#">Cats<i class="fa-solid fa-angle-down"></i>  </a></li>
+                        <li><a href="#">Pet Library</a></li>
+                    </ul>
+                   </div>
+                   <div class="col-lg-2">
+                    <div class="icon">
+                        @foreach (var item in Model.HeaderIcons)
+                       {
+                            <a href="@item.IconUrl"> <i class="@item.Icon"></i></a>
+                       }
+                      
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+    </header>

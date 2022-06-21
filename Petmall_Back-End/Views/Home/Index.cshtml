@@ -3,7 +3,7 @@
         <section id="main-slider">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                @foreach (var item in Model.Slider)
+                @foreach (var item in Model.Sliders)
                {
                      <div class="carousel-item right">
                         <img src="~/assets/images/@item.Image" class="d-block w-100" alt="...">
@@ -40,7 +40,7 @@
                 </div>
                 <div class="category-card">
                     <div class="row">
-                       @foreach (var item in Model.Category)
+                       @foreach (var item in Model.Categories)
                       {
                              <div class="col-6 col-sm-6 col-md-3 col-lg-2">
                             <div class="cart-item">
@@ -85,7 +85,7 @@
                         <div class="tabs">
                             <div class="tab-content active">
                                 <div class="row">
-                                  @foreach (var item in Model.Seller)
+                                  @foreach (var item in Model.Sellers)
                                  {
                                              <div class="col-lg-3">
                                         <div class="tab-item">
@@ -128,7 +128,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
-                          @foreach (var item in Model.Carousel)
+                          @foreach (var item in Model.Carousels)
                          {
                             <div class="col-lg-6 p-0">
                                 <div class="img">
@@ -167,7 +167,7 @@
             <div class="container">
                 <div class="icon-text">
                     <div class="row">
-                    @foreach (var item in Model.Icon)
+                    @foreach (var item in Model.Icons)
                    {
                            <div class="col-lg-3">
                             <div class="img">

@@ -45,6 +45,10 @@ namespace Petmall_Back_End
 
             app.UseEndpoints(endpoints =>
             {
+                    endpoints.MapControllerRoute(
+                      name: "areas",
+                      pattern: "{area:exists}/{controller=dashboard}/{actioniIndex}/{id?}"
+                    );
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=home}/{action=home}/{id?}"

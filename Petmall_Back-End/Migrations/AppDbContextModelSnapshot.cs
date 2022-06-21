@@ -66,6 +66,29 @@ namespace Petmall_Back_End.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("Petmall_Back_End.Models.HeaderIcon", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Icon")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IconUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SettingId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SettingId");
+
+                    b.ToTable("HeaderIcons");
+                });
+
             modelBuilder.Entity("Petmall_Back_End.Models.Icon", b =>
                 {
                     b.Property<int>("Id")
@@ -117,6 +140,24 @@ namespace Petmall_Back_End.Migrations
                     b.ToTable("Sellers");
                 });
 
+            modelBuilder.Entity("Petmall_Back_End.Models.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FooterImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HeaderLogo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Settings");
+                });
+
             modelBuilder.Entity("Petmall_Back_End.Models.Slider", b =>
                 {
                     b.Property<int>("Id")
@@ -136,6 +177,15 @@ namespace Petmall_Back_End.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sliders");
+                });
+
+            modelBuilder.Entity("Petmall_Back_End.Models.HeaderIcon", b =>
+                {
+                    b.HasOne("Petmall_Back_End.Models.Setting", "Setting")
+                        .WithMany("HeaderIcons")
+                        .HasForeignKey("SettingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
